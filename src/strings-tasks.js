@@ -419,8 +419,16 @@ function reverseWords(str) {
  *   invertCase('JavaScript is Fun') => 'jAVAsCRIPT IS fUN'
  *   invertCase('12345') => '12345'
  */
-function invertCase(/* str */) {
-  throw new Error('Not implemented');
+function invertCase(str) {
+  // throw new Error('Not implemented');
+  return str
+    .split('')
+    .map((letter) =>
+      letter.toLowerCase() === letter
+        ? letter.toUpperCase()
+        : letter.toLowerCase()
+    )
+    .join('');
 }
 
 /**
@@ -436,8 +444,9 @@ function invertCase(/* str */) {
  *   getStringFromTemplate('John','Doe') => 'Hello, John Doe!'
  *   getStringFromTemplate('Chuck','Norris') => 'Hello, Chuck Norris!'
  */
-function getStringFromTemplate(/* firstName, lastName */) {
-  throw new Error('Not implemented');
+function getStringFromTemplate(firstName, lastName) {
+  // throw new Error('Not implemented');
+  return `Hello, ${firstName} ${lastName}!`;
 }
 
 /**
@@ -450,8 +459,9 @@ function getStringFromTemplate(/* firstName, lastName */) {
  *   extractNameFromTemplate('Hello, John Doe!') => 'John Doe'
  *   extractNameFromTemplate('Hello, Chuck Norris!') => 'Chuck Norris'
  */
-function extractNameFromTemplate(/* value */) {
-  throw new Error('Not implemented');
+function extractNameFromTemplate(value) {
+  // throw new Error('Not implemented');
+  return value.split(', ')[1].slice(0, -1);
 }
 
 /**
@@ -465,8 +475,9 @@ function extractNameFromTemplate(/* value */) {
  *   unbracketTag('<span>') => 'span'
  *   unbracketTag('<a>') => 'a'
  */
-function unbracketTag(/* str */) {
-  throw new Error('Not implemented');
+function unbracketTag(str) {
+  // throw new Error('Not implemented');
+  return str.slice(1, -1);
 }
 
 /**
