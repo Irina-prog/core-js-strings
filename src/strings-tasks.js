@@ -516,17 +516,16 @@ function extractEmails(str) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/* str */) {
-  throw new Error('Not implemented');
-  // const input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  // const output = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
-  // return (
-  //   str
-  //     .split('')
-  //     // eslint-disable-next-line no-undef
-  //     .map((letter) => output[input[indexOf(letter)]])
-  //     .join('')
-  // );
+function encodeToRot13(str) {
+  // throw new Error('Not implemented');
+  const input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ?!.,';
+  const output = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm ?!.,';
+  const inputArray = input.split('');
+  const outputArray = output.split('');
+  return str
+    .split('')
+    .map((letter) => outputArray[inputArray.indexOf(letter)])
+    .join('');
 }
 
 /**
